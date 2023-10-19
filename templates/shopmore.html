@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="shadow bg-success bg-opacity-50 p-2 text-dark" style="border: none;border-radius: 10px;">
+                <h5>Filter By Category</h5>
+                <hr>
+                <p><a href="/shopmore" class="cat">All</a></p>
+                <p><a href="/catfilter/1" class="cat">Sale</a></p>
+                <p><a href="/catfilter/2" class="cat">Hot</a></p>
+                <p><a href="/catfilter/3" class="cat">New Arrivals</a></p>
+                <p><a href="/catfilter/4" class="cat">Accessories</a></p>
+            </div>
+            <div class="shadow bg-success bg-opacity-50 p-2 text-dark mt-3" style="border: none;border-radius: 10px;">
+                <h5>Filter By Price Range</h5>
+                <hr>
+                <form action="/range">
+                <div class="mb-3">
+                    <label for="Input1" class="form-label">Min Value:</label>
+                    <input type="number" class="form-control" id="Input1" name="min" placeholder="enter min value">
+                </div>
+                <div class="mb-3">
+                    <label for="Input2" class="form-label">Max Value:</label>
+                    <input type="number" class="form-control" id="Input2" name="max" placeholder="enter max value">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-outline-success" value="Search">
+                </div>
+                </form>
+            </div>
+            <div class="shadow bg-success bg-opacity-50 p-2 text-dark mt-3" style="border: none;border-radius: 10px;">
+                <h5>Sort By Price</h5>
+                <hr>
+                <p><a href="/sort/0" class="cat">Low to High</a></p>
+                <p><a href="/sort/1" class="cat">High to low</a></p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                {% for x in products %}
+                <div class="col-md-3 bg-info-subtle pt-3 mb-3" style="border: none; border-radius: 8px;width:250px;margin: auto;">
+                    <img src="{{x.pimage.url}}" class="img-thumbnail" width="100%" style="height: 300px;">
+                    <p class="text-center text-success-emphasis mt-2">{{x.name}} <br> <b>Rs.{{x.price}}</b> <br> 
+                    {% if x.cat == 1 %}
+                    Sale
+                    {% elif x.cat == 2 %}
+                    Hot
+                    {% elif x.cat == 3 %}
+                    New Arrivals</b>
+                    {% else %}
+                    Accessories
+                    {% endif %}
+                    </p>
+                    <p align="center"><a href="pdetails/{{x.id}}" class="btn btn-outline-success">See Details</a></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div> <br>
+
+{% endblock 'main' %}

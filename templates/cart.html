@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="container bg-danger-subtle mt-3 mb-3">
+    <div class="row">
+        <div class="col-md-12 mt-2">
+            <h1 align="center" style="color: rgb(5, 5, 117);">SHOPPING CART</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h6 style="background-color: rgb(9, 6, 49); color: silver;">Customer Details</h6>
+        </div>
+        <div class="col-md-8">
+            {% for x in products %}
+            {% if forloop.counter == 1 %}
+            <p><strong>Customer Name:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.username}}</p>
+            <p><strong>Email ID:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.email}}</p>
+            {% endif %}
+            {% endfor %}
+        </div> 
+        <div class="col-md-4">
+            <h5>Price Details</h5>
+            <hr>
+            <p><strong>Price of {{totalitems}} Items:</strong> Rs.{{total}}</p>
+            <p><strong>Total Amount:</strong> Rs.{{total}}</p>
+            <a href="/placeorder"><button class="btn btn-dark">Place Order<i class="bi bi-cart-check-fill"></i></button></a>
+        </div>
+    </div><hr>
+    <div class="row m-1">
+        {% for x in products %}
+        <div class="col-md-4 mb-3 ps-5 shadow">
+            <img src="{{x.pid.pimage.url}}" class="img-fluid" style="height: 250px;">
+        </div>
+        <div class="col-md-8 bg-white mb-3 shadow">
+            <p><strong>Product Name:</strong>&nbsp;&nbsp;&nbsp;{{x.pid.name}}</p>
+            <p><strong>Price:</strong>&nbsp;&nbsp;&nbsp;Rs.{{x.pid.price}}</p>
+            <p><strong>Category:</strong>&nbsp;&nbsp;&nbsp;
+                {% if x.pid.cat == 1 %}
+                Sale
+                {% elif x.pid.cat == 2 %}
+                Hot
+                {% elif x.pid.cat == 3 %}
+                New Arrivals</b>
+                {% else %}
+                Accessories
+                {% endif %}
+            </p>
+            <p><strong>Quantity</strong>
+            <a href="updateqty/0/{{x.id}}"><button class="btn btn-dark"><b>-</b></button></a>
+            <input type="number" value="{{x.qty}}">
+            <a href="updateqty/1/{{x.id}}"><button class="btn btn-dark"><b>+</b></button></a>
+            <br><br>    
+            <a href="/remove/{{x.id}}"><button class="btn btn-dark"><i class="bi bi-trash-fill mt-5"></i></button></a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock 'main' %}

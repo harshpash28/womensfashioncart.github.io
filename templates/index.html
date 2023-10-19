@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="container bg-success p-2 text-dark bg-opacity-50">
+    <div class="row">
+        <div class="col-md-7">
+            <p class="display-1 text-success-emphasis w-100 p-3">Discover And <br>Find Your <br>Own Brands</p>
+            <p class="text-success-emphasis p-3">Explore Our Curated Collection of stylish<br>Clothing And Accessories Tailored To Your <br>Unique Taste. </p>
+            <p class="p-3"><a href="/shopmore"><button type="button" class="btn border-success ps-5 pe-5">Explore</button></a></p>
+        </div>
+        <div class="col-md-5">
+          <img src="{% static 'asset/images/darkgreen2.jpg' %}" class="img-fluid p-3" style="width:80%;" alt="...">
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="row"><!--first row starts-->
+    <div class="col-md-12 text-success-emphasis" align="center">
+    <p class="fs-1">Best Selling</p>
+    <p class="fs-5">Get in on the trend with our curated selection of best-selling styles.</p>
+    </div>
+  </div><!--first row ends-->
+  
+  <div class="row mt-2" align="center"><!--second row starts-->
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/img1.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4">Pink Blouse Shirts Top with Collar Blouse <br> <b>Rs.3499</b></p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/img2.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4">Green Velvet Suit for Women <br> <b>Rs.5999</b></p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/img3.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4">Stylish Jackets <br> <b>Rs.2999</b></p>
+    </div>
+  </div><!--second row ends-->
+<br><br>
+  <div class="row"> <!--row 3 starts-->
+    <div class="col-md-12">
+      <p align="center"><a class="anchor fs-5" href="/shopmore">See more &nbsp;<i class="bi bi-arrow-right"></i></a></p>
+    </div>
+  </div><!--row 3 ends-->
+  <br><br><br>
+  <div class="row"><!--row 4 starts-->
+    <div class="col-md-12 text-success-emphasis" align="center">
+    <p class="fs-1">Best Selling</p>
+    </div>
+  </div><!--row 4 ends-->
+  <br><br>
+  <div class="row"><!--row 5 starts-->
+    <div class="col-md-12">
+      <div class="text-center fs-6">
+        <a class="anchor1" href="/home">SALE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="anchor1" href="/hot">HOT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="anchor1" href="/newarrivals">NEW ARRIVALS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="anchor1" href="/accessories">ACCESSORIES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div><!--row 5 ends-->
+  <br>
+  <div class="row text-center"><!--row 6 starts-->
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale1.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Lace Bodycon Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale2.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">White Cotton Printed Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale3.jpeg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Lace Bodycon Dress with Cap Sleeve <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale4.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Navy Jacquard Tea Length Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+  </div><!--row 6 ends--> <br>
+  <div class="row text-center"><!--row 7 starts-->
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale5.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Blue Paisley Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale6.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Sleeveless Dress Flower Printed <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale7.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Geniun Leather Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'asset/images/sale/sale8.jpg' %}" class="img-fluid" alt="...">
+      <p class="text text-success-emphasis">Simple Midi Dress <br>
+        Rs. 1499 &nbsp;<i style="color:darkgoldenrod" class="bi bi-star-fill">3</i></p>
+    </div>
+  </div><!--row 7 ends-->
+  <br><br><br><br>
+  <div class="row bg-success bg-opacity-50"><!--row 8 starts-->
+    <div class="col-md-5 ">
+      <img src="{% static 'asset/images/Untitled.png' %}" width="100%" class="img-fluid pt-3" alt="...">
+    </div>
+    <div class="col-md-7">
+          <p class="text-success-emphasis display-1 p-3">Exclusive Offer</p>
+          <p class="text-success-emphasis p-3">Unlock the ultimate style upgrade with our exclusive offer Enjoy savings of up to 40% off on our latest New Arrivals</p>
+          <div class="col-md-12">
+            <p class="one"><b>06</b> <br> <b>Days</b></p>
+            <p class="one"><b>18</b> <br> <b>Hours</b></p>
+            <p class="one"><b>48</b> <br><b>Min</b></p>
+            <br><br>
+            <p class="two"><a class="two fs-6" href="/shopmore">SHOP NOW</a></p>
+          </div>
+      </div>
+  </div><!--row 8 ends-->
+  <br><br><br><br>
+  <div class="row"><!-- row 9 starts-->
+    <div class="col-md-12 text-success-emphasis" align="center">
+    <p class="fs-1">Designer Clothes For You</p>
+    <p class="fs-5">Immerse yourself in the world of luxury fashion with our meticulously crafted clothes!</p>
+    </div>
+  </div><!--row 9 ends-->
+  
+  <div class="row mt-2" align="center"><!--row 10 starts-->
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/design1.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4"><b>"Cotton Silk Pyjama Type"</b></p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/design2.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4"><b>"Pink Coat and Black Hat"</b></p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'asset/images/design3.jpg' %}" class="img-thumbnail" alt="...">
+      <p class="text-center text-success-emphasis mt-4"><b>"Vintage Formal Dress"</b></p>
+    </div>
+  </div><!--row 10 ends-->
+  <br><br><br><br>
+  <div class="row"><!--row 11 starts-->
+  <h1 class="text-center text-success-emphasis">Feedback Corner</h1>
+  <br><br><br><br><br>
+    <div class="col-md-12">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active w-100">
+            <div class="three bg-success bg-opacity-50 text-success-emphasis">
+              <b>Emily Watson</b>
+              <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkour process is smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+            </div>
+          </div>
+          <div class="carousel-item w-100">
+            <div class="three bg-success bg-opacity-50 text-success-emphasis">
+              <b>Alexa Rome</b>
+              <p>I absolutely love the quality and style of the clothing I purchased from this website, customer service was outstanding, and I received my order quickly. Highly recommended!</p>
+            </div>
+          </div> 
+          <div class="carousel-item w-100">
+            <div class="three bg-success bg-opacity-50 text-success-emphasis">
+              <b>Olivia Martinez</b>
+              <p>I had a greate  experience shopping on this website. The cloths are brought are fashionable and comfortable. Highly satisfied!</p>
+            </div>
+          </div>
+          <div class="carousel-item w-100">
+            <div class="three bg-success bg-opacity-50 text-success-emphasis">
+              <b>Rubina Watson</b>
+              <p>I completely love this site, found it on EBay at first now I just order directly through them...I am always complemented on my outfits I will be back for more...Thank you for having cute trendy clothes that fit and look good.</p>
+            </div>
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-success" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-success" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  </div><!--row 11 ends-->
+</div>
+  <br><br><br><br><br>
+
+
+{% endblock 'main' %}

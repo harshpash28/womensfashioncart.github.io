@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="container mt-3 mb-3"><!--main starts-->
+    <div class="row text-white bg-danger-subtle"><!--row1 starts-->
+        <div class="col-md-6 display-1 p-4">
+            <p class="text" style="color: rgb(253, 250, 250);">Check out our latest collection at any time</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'asset/images/about/about1.png' %}" class="object-fit-cover" alt="...">
+        </div>
+    </div><!--row1 ends-->
+    <div class="row mt-2"><!--row2 starts-->
+        <div class="col-md-3 bg-info-subtle display-1 text-center" style="border:none; border-radius:10px;">
+            <p class="text p-auto" style="color: rgb(36, 82, 121);"><b>ABOUT</b></p> 
+        </div>
+        <div class="col-md-6 text-dark fs-4 p-4" style="height: 400px;">
+            <p style="text-align: justify;text-align: center;">
+                THE FASHION STORE caters to thoughtful shoppers who appreciate unique designs and top 
+                quality pieces you just can't find anywhere else. We are constantly curating fresh new 
+                collections and looking for the next big thing our customers will love. Founded in Mumbai 
+                in 2023, we are proud to be your Online Clothing Shop that you can rely on for our expert 
+                service and care.
+            </p>
+        </div>
+        <div class="col-md-3 bg-info-subtle display-1 text-center" style="border:none; border-radius:10px;">
+            <p class="text" style="color: rgb(36, 82, 121);"><b>US</b></p> 
+        </div>
+    </div><!--row2 ends-->
+    <div class="row mt-2"><!--row3 starts-->
+        <div class="col-md">
+            <img src="{% static 'asset/images/about/about2.jpg' %}" width="100%" style="border: groove;" class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-6 bg-warning-subtle">
+            <div class="text text-center display-1 p-5 text-success-emphasis">Thank <br> You!!!</div>
+        </div>
+    </div><!--row3 ends-->
+</div><!--main ends-->
+
+{% endblock 'main' %}

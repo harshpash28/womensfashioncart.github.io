@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 shadow p-4 m-auto mt-5">
+                <h2 align="center"><div class="text text-info">Registration</div></h2>
+                {% if errmsg %}
+                <div class="alert alert-danger">
+                    {{errmsg}}
+                </div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label">Username:</label>
+                        <input type="email" class="form-control" id="Input1" name="uname" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Input2" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="Input1" name="upass" placeholder="enter password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Input3" class="form-label">Confirm Password:</label>
+                        <input type="password" class="form-control" id="Input1" name="ucpass" placeholder="confirm password">
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-info" value="register">
+                        Already Register?<a href="/login" style="text-decoration: none;">Login</a>
+                    </div>
+                    {% if success %}
+                    <div class="alert alert-success">
+                        {{success}}
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="static 'asset/js/bootstrap.min.js"></script> 
+</body>
+</html>

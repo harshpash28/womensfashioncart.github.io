@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="container mt-3 mb-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="background-color: lightcyan; color:darkblue;">Customer Details</h2>
+        </div>
+        <div class="col-md-8">
+            {% for x in products %}
+            {% if forloop.counter == 1 %}
+            <p><strong>Customer Name:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.username}}</p>
+            <p><strong>Email ID:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.email}}</p>
+            {% endif %}
+            {% endfor %}
+        </div> 
+        <div class="col-md-4">
+            <h5 style="background-color: lightcyan; color: darkblue;">Price Details</h5>
+            <hr>
+            <p><strong>Price of {{n}} Items:</strong> Rs.{{total}}</p>
+            <p><strong>Total Amount:</strong> Rs.{{total}}</p>
+            <a href="/makepayment"><button class="btn btn-dark">Make Payment<i class="bi bi-cart-check-fill"></i></button></a>
+        </div>
+    </div><hr>
+    <div class="row m-1">
+        {% for x in products %}
+        <div class="col-md-4 ps-5 mb-3">
+            <img src="{{x.pid.pimage.url}}" class="img-fluid" style="height: 250px;" alt="...">
+        </div>
+        <div class="col-md-8 bg-white p-2 mb-3 bg-info-subtle">
+            <p><strong>Product Name:</strong>&nbsp;&nbsp;&nbsp;{{x.pid.name}}</p>
+            <p><strong>Price:</strong>&nbsp;&nbsp;&nbsp;Rs.{{x.pid.price}}</p>
+            <p><strong>Category:</strong>&nbsp;&nbsp;&nbsp;
+                {% if x.pid.cat == 1 %}
+                Sale
+                {% elif x.pid.cat == 2 %}
+                Hot
+                {% elif x.pid.cat == 3 %}
+                New Arrivals</b>
+                {% else %}
+                Accessories
+                {% endif %}
+            </p>
+            <p><strong>Quantity:</strong>&nbsp;&nbsp;&nbsp;{{x.qty}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock 'main' %}

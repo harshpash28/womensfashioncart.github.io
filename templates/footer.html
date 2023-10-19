@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="container">
+<div class="row bg-success bg-opacity-50 pt-3"><!--navbar starts-->
+    <div class="col-md-3 text-success-emphasis">
+      <h2>Social Media</h2><br>
+      <a href="https://www.facebook.com/"><i class="bi bi-facebook text-success-emphasis"></i></a>
+      <a href="https://www.instagram.com/accounts/login/"><i class="bi bi-instagram text-success-emphasis"></i></a>
+      <a href="https://twitter.com/i/flow/login"><i class="bi bi-twitter text-success-emphasis"></i></a>
+    </div>
+    <div class="col-md-3 text-center text-success-emphasis">
+      <a href="/home" style="text-decoration: none;"><p class="text text-success-emphasis">home</p></a>
+      <a href="/about" style="text-decoration: none;"><p class="text text-success-emphasis">about</p></a>
+      <a href="/shopmore" style="text-decoration: none;"><p class="text text-success-emphasis">products</p></a>
+      <a href="/contact" style="text-decoration: none;"><p class="text text-success-emphasis">contacts</p></a>
+      <a href="/viewcart" style="text-decoration: none;"><p class="text text-success-emphasis">cart</p></a>
+    </div>
+    <div class="col-md-6">
+      <h1 class="text-success-emphasis">Stay Connected</h1><br>
+      <form method="POST">
+        <div class="mb-3">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your email"> <br>
+          <input type="submit" class="btn btn-success" value="submit"></input>
+        </div>
+      </form>
+    </div>
+  </div><!--navbar ends-->
+<script src="{% static 'asset/js/bootstrap.min.js' %}"></script> 
+</body>
+</html>
